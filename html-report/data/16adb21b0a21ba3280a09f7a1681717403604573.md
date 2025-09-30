@@ -1,0 +1,133 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - link "Ambassador" [ref=e5] [cursor=pointer]:
+      - /url: /ambassador
+    - link "Help" [ref=e8] [cursor=pointer]:
+      - /url: /help-faq
+  - generic [ref=e9]:
+    - img "TEN_X_YOU_LOGO" [ref=e12] [cursor=pointer]
+    - generic [ref=e13]:
+      - generic [ref=e15] [cursor=pointer]: Fan series
+      - generic [ref=e18] [cursor=pointer]: Men
+      - generic [ref=e21] [cursor=pointer]: Women
+      - generic [ref=e24] [cursor=pointer]: Shoes
+      - generic [ref=e27] [cursor=pointer]: Apparel
+      - generic [ref=e30] [cursor=pointer]: Acessories
+    - generic [ref=e31]:
+      - button [ref=e32] [cursor=pointer]:
+        - img [ref=e33] [cursor=pointer]
+      - button [ref=e35] [cursor=pointer]:
+        - img [ref=e36] [cursor=pointer]
+      - button [ref=e38] [cursor=pointer]:
+        - img [ref=e39] [cursor=pointer]
+      - button [ref=e41] [cursor=pointer]:
+        - img [ref=e42] [cursor=pointer]
+  - generic [ref=e45]:
+    - generic [ref=e47]:
+      - generic [ref=e49]:
+        - img [ref=e53] [cursor=pointer]
+        - img [ref=e57] [cursor=pointer]
+        - img [ref=e61] [cursor=pointer]
+        - img [ref=e65] [cursor=pointer]
+      - generic [ref=e68]:
+        - button [ref=e69] [cursor=pointer]
+        - button [ref=e71] [cursor=pointer]
+        - button [ref=e73] [cursor=pointer]
+        - button [ref=e75] [cursor=pointer]
+    - generic [ref=e79]:
+      - generic [ref=e81]:
+        - img [ref=e82]
+        - paragraph [ref=e84]: Designed in Berlin & Portland
+      - generic [ref=e86]:
+        - img [ref=e87]
+        - paragraph [ref=e89]: Co-created by Sachin Tendulkar
+      - generic [ref=e91]:
+        - img [ref=e92]
+        - paragraph [ref=e94]: Technology Marker
+    - generic [ref=e95]:
+      - generic [ref=e96]:
+        - heading "Shop By Activity" [level=1] [ref=e97]
+        - generic [ref=e99]:
+          - generic [ref=e100] [cursor=pointer]: Cricket
+          - generic [ref=e101] [cursor=pointer]: Lifestyle
+          - generic [ref=e105] [cursor=pointer]: Running
+          - generic [ref=e106] [cursor=pointer]: Walking
+      - generic [ref=e109]:
+        - img "Lifestyle" [ref=e111]
+        - button "SHOP Lifestyle" [ref=e113]:
+          - generic [ref=e114]: SHOP Lifestyle
+    - generic [ref=e198]:
+      - generic [ref=e200]:
+        - img [ref=e201]
+        - paragraph [ref=e203]: Same-day delivery. On us.
+      - generic [ref=e205]:
+        - img [ref=e206]
+        - paragraph [ref=e208]: Doorstep Try-On / Doorstep Fit Check
+      - generic [ref=e210]:
+        - img [ref=e211]
+        - paragraph [ref=e213]: 14-day returns. No questions asked.
+    - generic [ref=e217]:
+      - img [ref=e219]
+      - generic [ref=e222]:
+        - button [disabled] [ref=e223] [cursor=pointer]:
+          - img [ref=e224] [cursor=pointer]
+        - button [disabled] [ref=e278] [cursor=pointer]:
+          - img [ref=e279] [cursor=pointer]
+  - generic [ref=e281]:
+    - generic [ref=e282]:
+      - generic [ref=e284]:
+        - generic [ref=e285]: Help
+        - generic [ref=e286]:
+          - generic [ref=e287] [cursor=pointer]: Help
+          - generic [ref=e288] [cursor=pointer]: Delivery & Shipping
+          - generic [ref=e289] [cursor=pointer]: Returns
+      - generic [ref=e291]:
+        - generic [ref=e292]: Legals
+        - generic [ref=e293]:
+          - generic [ref=e294] [cursor=pointer]: About Us
+          - generic [ref=e295] [cursor=pointer]: Terms & Conditions
+          - generic [ref=e296] [cursor=pointer]: Privacy Policy
+          - generic [ref=e297] [cursor=pointer]: Returns & Refund
+    - generic [ref=e299]:
+      - generic [ref=e301]:
+        - heading "Contact Us" [level=3] [ref=e302]
+        - generic [ref=e303]:
+          - generic [ref=e304] [cursor=pointer]:
+            - button [ref=e306] [cursor=pointer]:
+              - img [ref=e307] [cursor=pointer]
+            - heading "WhatsApp us at 9916201010" [level=1] [ref=e309] [cursor=pointer]:
+              - generic [ref=e310] [cursor=pointer]: WhatsApp us at 9916201010
+          - generic [ref=e311]:
+            - link "Email us at joyofplay@tenxyou.com" [ref=e312] [cursor=pointer]:
+              - /url: mailto:joyofplay@tenxyou.com?subject=Hello%20Team&body=I%20would%20like%20to%20know%20about...
+              - button [ref=e314] [cursor=pointer]:
+                - img [ref=e315] [cursor=pointer]
+              - heading "Email us at joyofplay@tenxyou.com" [level=1] [ref=e317] [cursor=pointer]:
+                - generic [ref=e318] [cursor=pointer]: Email us at joyofplay@tenxyou.com
+            - link "For any support, write to us at thirdumpire@tenxyou.com" [ref=e319] [cursor=pointer]:
+              - /url: mailto:thirdumpire@tenxyou.com?subject=Hello%20Team&body=I%20would%20like%20to%20know%20about...
+              - button [ref=e321] [cursor=pointer]:
+                - img [ref=e322] [cursor=pointer]
+              - heading "For any support, write to us at thirdumpire@tenxyou.com" [level=1] [ref=e324] [cursor=pointer]:
+                - generic [ref=e325] [cursor=pointer]: For any support, write to us at thirdumpire@tenxyou.com
+          - generic [ref=e326]:
+            - button [ref=e328] [cursor=pointer]:
+              - img [ref=e329] [cursor=pointer]
+            - generic [ref=e331]:
+              - heading "Visit us at:" [level=1] [ref=e332]:
+                - generic [ref=e333]: "Visit us at:"
+              - paragraph [ref=e334]: 5th Main road, 1st Stage Rd, Binnamangala, Indiranagar, Bengaluru, Karnataka 560038
+      - generic [ref=e335]:
+        - generic [ref=e336]:
+          - button [ref=e337] [cursor=pointer]:
+            - img [ref=e338] [cursor=pointer]
+          - button [ref=e340] [cursor=pointer]:
+            - img [ref=e341] [cursor=pointer]
+          - button [ref=e343] [cursor=pointer]:
+            - img [ref=e344] [cursor=pointer]
+        - generic [ref=e346]: © 2025 TenXYou, Inc. All rights reserved
+  - alert [ref=e347]: Designed in Berlin & Portland
+```

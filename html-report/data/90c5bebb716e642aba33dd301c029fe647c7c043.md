@@ -1,0 +1,329 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - link "Ambassador" [ref=e5] [cursor=pointer]:
+      - /url: /ambassador
+    - link "Help" [ref=e8] [cursor=pointer]:
+      - /url: /help-faq
+  - generic [ref=e9]:
+    - img "TEN_X_YOU_LOGO" [ref=e12] [cursor=pointer]
+    - generic [ref=e13]:
+      - generic [ref=e15] [cursor=pointer]: Fan series
+      - generic [ref=e18] [cursor=pointer]: Men
+      - generic [ref=e21] [cursor=pointer]: Women
+      - generic [ref=e24] [cursor=pointer]: Shoes
+      - generic [ref=e27] [cursor=pointer]: Apparel
+      - generic [ref=e30] [cursor=pointer]: Acessories
+    - generic [ref=e31]:
+      - button [ref=e32] [cursor=pointer]:
+        - img [ref=e33] [cursor=pointer]
+      - button [ref=e35] [cursor=pointer]:
+        - img [ref=e36] [cursor=pointer]
+      - button [ref=e38] [cursor=pointer]:
+        - img [ref=e39] [cursor=pointer]
+      - button [ref=e41] [cursor=pointer]:
+        - img [ref=e42] [cursor=pointer]
+  - generic [ref=e45]:
+    - generic [ref=e46]:
+      - generic [ref=e47]:
+        - generic [ref=e48]:
+          - generic [ref=e49]:
+            - heading "Delivery Address" [level=1] [ref=e50]
+            - button "+ Add New Address" [ref=e51]:
+              - heading "+ Add New Address" [level=1] [ref=e52]:
+                - generic [ref=e53]: + Add New Address
+          - generic [ref=e56]:
+            - generic [ref=e57]:
+              - generic [ref=e59]:
+                - heading "Work" [level=1] [ref=e60]:
+                  - generic [ref=e61]: Work
+                - heading "default" [level=1] [ref=e62]
+              - generic [ref=e63]:
+                - heading "DLF Tower 7B , Cybergreen , Cybergreen" [level=1] [ref=e64]:
+                  - generic [ref=e65]: DLF Tower 7B , Cybergreen , Cybergreen
+                - heading "GURUGRAM , 122010" [level=1] [ref=e66]:
+                  - generic [ref=e67]: GURUGRAM , 122010
+            - generic [ref=e68]:
+              - heading "Receiver's Details" [level=1] [ref=e69]:
+                - generic [ref=e70]: Receiver's Details
+              - generic [ref=e71]:
+                - generic [ref=e72]:
+                  - heading "Name :" [level=1] [ref=e73]:
+                    - generic [ref=e74]: "Name :"
+                  - heading "Bipin" [level=1] [ref=e75]:
+                    - generic [ref=e76]: Bipin
+                - generic [ref=e77]:
+                  - heading "Phone :" [level=1] [ref=e78]:
+                    - generic [ref=e79]: "Phone :"
+                  - heading "+917991702806" [level=1] [ref=e80]:
+                    - generic [ref=e81]: "+917991702806"
+                - generic [ref=e82]:
+                  - heading "Email :" [level=1] [ref=e83]:
+                    - generic [ref=e84]: "Email :"
+                  - heading "user2_1759228786532@gmail.com" [level=1] [ref=e85]:
+                    - generic [ref=e86]: user2_1759228786532@gmail.com
+        - generic [ref=e87]:
+          - generic [ref=e88]:
+            - heading "Order Items" [level=1] [ref=e89]
+            - heading "1 Items" [level=1] [ref=e90]
+          - generic [ref=e94]:
+            - generic [ref=e95]:
+              - img [ref=e97] [cursor=pointer]
+              - heading "1" [level=1] [ref=e99]
+            - generic [ref=e100]:
+              - generic [ref=e101]:
+                - heading "Cricket Batsman Premium" [level=1] [ref=e102]:
+                  - generic [ref=e103]: Cricket Batsman Premium
+                - heading "₹ 2,500" [level=1] [ref=e104]:
+                  - generic [ref=e105]: ₹ 2,500
+              - generic [ref=e106]:
+                - generic [ref=e107]:
+                  - heading "Size :" [level=1] [ref=e108]:
+                    - generic [ref=e109]: "Size :"
+                  - heading "39" [level=1] [ref=e110]:
+                    - generic [ref=e111]: "39"
+                - generic [ref=e112]:
+                  - heading "Color :" [level=1] [ref=e113]:
+                    - generic [ref=e114]: "Color :"
+                  - heading "Blue" [level=1] [ref=e115]:
+                    - generic [ref=e116]: Blue
+                - generic [ref=e117]:
+                  - heading "Fit :" [level=1] [ref=e118]:
+                    - generic [ref=e119]: "Fit :"
+                  - heading "Regular" [level=1] [ref=e120]:
+                    - generic [ref=e121]: Regular
+      - generic [ref=e122]:
+        - generic [ref=e124]:
+          - heading "Order Summary" [level=1] [ref=e125]
+          - button [ref=e127] [cursor=pointer]:
+            - img [ref=e128] [cursor=pointer]
+        - generic [ref=e130]:
+          - generic [ref=e131]:
+            - heading "Offers Available" [level=1] [ref=e132]
+            - heading "View All Offers >" [level=1] [ref=e133]:
+              - generic [ref=e134]: View All Offers >
+          - generic [ref=e136]:
+            - textbox "Enter Pincode" [ref=e137]
+            - button [ref=e138] [cursor=pointer]:
+              - img [ref=e139] [cursor=pointer]
+          - generic [ref=e141]:
+            - generic [ref=e142]:
+              - generic [ref=e143]:
+                - generic [ref=e144]:
+                  - generic [ref=e145]:
+                    - generic [ref=e146]:
+                      - img [ref=e148]
+                      - generic [ref=e149]:
+                        - heading "ICICIBANK" [level=1] [ref=e150]
+                        - heading "10% OFF" [level=1] [ref=e151]
+                    - button "Apply" [ref=e152]:
+                      - generic [ref=e153]: Apply
+                  - generic [ref=e154]:
+                    - heading "Get your order at ₹2,765" [level=1] [ref=e155]
+                    - heading "₹3,765" [level=1] [ref=e156]
+                - generic [ref=e157]:
+                  - list [ref=e158]:
+                    - listitem [ref=e159]:
+                      - heading "Slows dual delivery system packs all your essential system packs" [level=1] [ref=e160]:
+                        - generic [ref=e161]: Slows dual delivery system packs all your essential system packs
+                    - listitem [ref=e162]:
+                      - heading "Slows dual delivery system packs all your essential system packs" [level=1] [ref=e163]:
+                        - generic [ref=e164]: Slows dual delivery system packs all your essential system packs
+                  - button "Know More >" [ref=e165]:
+                    - heading "Know More >" [level=1] [ref=e166]:
+                      - generic [ref=e167]: Know More >
+              - generic [ref=e168]:
+                - generic [ref=e169]:
+                  - generic [ref=e170]:
+                    - generic [ref=e171]:
+                      - img [ref=e173]
+                      - generic [ref=e174]:
+                        - heading "ICICIBANK" [level=1] [ref=e175]
+                        - heading "10% OFF" [level=1] [ref=e176]
+                    - button "Apply" [ref=e177]:
+                      - generic [ref=e178]: Apply
+                  - generic [ref=e179]:
+                    - heading "Get your order at ₹2,765" [level=1] [ref=e180]
+                    - heading "₹3,765" [level=1] [ref=e181]
+                - generic [ref=e182]:
+                  - list [ref=e183]:
+                    - listitem [ref=e184]:
+                      - heading "Slows dual delivery system packs all your essential system packs" [level=1] [ref=e185]:
+                        - generic [ref=e186]: Slows dual delivery system packs all your essential system packs
+                    - listitem [ref=e187]:
+                      - heading "Slows dual delivery system packs all your essential system packs" [level=1] [ref=e188]:
+                        - generic [ref=e189]: Slows dual delivery system packs all your essential system packs
+                  - button "Know More >" [ref=e190]:
+                    - heading "Know More >" [level=1] [ref=e191]:
+                      - generic [ref=e192]: Know More >
+              - generic [ref=e193]:
+                - generic [ref=e194]:
+                  - generic [ref=e195]:
+                    - generic [ref=e196]:
+                      - img [ref=e198]
+                      - generic [ref=e199]:
+                        - heading "ICICIBANK" [level=1] [ref=e200]
+                        - heading "10% OFF" [level=1] [ref=e201]
+                    - button "Apply" [ref=e202]:
+                      - generic [ref=e203]: Apply
+                  - generic [ref=e204]:
+                    - heading "Get your order at ₹2,765" [level=1] [ref=e205]
+                    - heading "₹3,765" [level=1] [ref=e206]
+                - generic [ref=e207]:
+                  - list [ref=e208]:
+                    - listitem [ref=e209]:
+                      - heading "Slows dual delivery system packs all your essential system packs" [level=1] [ref=e210]:
+                        - generic [ref=e211]: Slows dual delivery system packs all your essential system packs
+                    - listitem [ref=e212]:
+                      - heading "Slows dual delivery system packs all your essential system packs" [level=1] [ref=e213]:
+                        - generic [ref=e214]: Slows dual delivery system packs all your essential system packs
+                  - button "Know More >" [ref=e215]:
+                    - heading "Know More >" [level=1] [ref=e216]:
+                      - generic [ref=e217]: Know More >
+              - generic [ref=e218]:
+                - generic [ref=e219]:
+                  - generic [ref=e220]:
+                    - generic [ref=e221]:
+                      - img [ref=e223]
+                      - generic [ref=e224]:
+                        - heading "ICICIBANK" [level=1] [ref=e225]
+                        - heading "10% OFF" [level=1] [ref=e226]
+                    - button "Apply" [ref=e227]:
+                      - generic [ref=e228]: Apply
+                  - generic [ref=e229]:
+                    - heading "Get your order at ₹2,765" [level=1] [ref=e230]
+                    - heading "₹3,765" [level=1] [ref=e231]
+                - generic [ref=e232]:
+                  - list [ref=e233]:
+                    - listitem [ref=e234]:
+                      - heading "Slows dual delivery system packs all your essential system packs" [level=1] [ref=e235]:
+                        - generic [ref=e236]: Slows dual delivery system packs all your essential system packs
+                    - listitem [ref=e237]:
+                      - heading "Slows dual delivery system packs all your essential system packs" [level=1] [ref=e238]:
+                        - generic [ref=e239]: Slows dual delivery system packs all your essential system packs
+                  - button "Know More >" [ref=e240]:
+                    - heading "Know More >" [level=1] [ref=e241]:
+                      - generic [ref=e242]: Know More >
+              - generic [ref=e243]:
+                - generic [ref=e244]:
+                  - generic [ref=e245]:
+                    - generic [ref=e246]:
+                      - img [ref=e248]
+                      - generic [ref=e249]:
+                        - heading "ICICIBANK" [level=1] [ref=e250]
+                        - heading "10% OFF" [level=1] [ref=e251]
+                    - button "Apply" [ref=e252]:
+                      - generic [ref=e253]: Apply
+                  - generic [ref=e254]:
+                    - heading "Get your order at ₹2,765" [level=1] [ref=e255]
+                    - heading "₹3,765" [level=1] [ref=e256]
+                - generic [ref=e257]:
+                  - list [ref=e258]:
+                    - listitem [ref=e259]:
+                      - heading "Slows dual delivery system packs all your essential system packs" [level=1] [ref=e260]:
+                        - generic [ref=e261]: Slows dual delivery system packs all your essential system packs
+                    - listitem [ref=e262]:
+                      - heading "Slows dual delivery system packs all your essential system packs" [level=1] [ref=e263]:
+                        - generic [ref=e264]: Slows dual delivery system packs all your essential system packs
+                  - button "Know More >" [ref=e265]:
+                    - heading "Know More >" [level=1] [ref=e266]:
+                      - generic [ref=e267]: Know More >
+            - generic [ref=e268]:
+              - button [disabled] [ref=e269] [cursor=pointer]:
+                - img [ref=e270] [cursor=pointer]
+              - button [ref=e272] [cursor=pointer]:
+                - img [ref=e273] [cursor=pointer]
+        - generic [ref=e276]:
+          - heading "Payment Methods" [level=1] [ref=e277]
+          - generic [ref=e278]:
+            - heading "ICICI Coupon Applied for" [level=1] [ref=e279]:
+              - generic [ref=e280]: ICICI Coupon Applied for
+            - heading "Applicable only for ICICI Bank Payments" [level=1] [ref=e281]:
+              - generic [ref=e282]: Applicable only for ICICI Bank Payments
+          - generic [ref=e283]:
+            - generic [ref=e284]:
+              - img [ref=e285]
+              - paragraph [ref=e287]: Google Pay
+            - heading "Get At Rs. 100 off" [level=1] [ref=e288]:
+              - generic [ref=e289]: Get At Rs. 100 off
+          - generic [ref=e290]:
+            - generic [ref=e291]:
+              - img [ref=e292]
+              - paragraph [ref=e294]: UPI
+            - heading "Get At Rs. 100 off" [level=1] [ref=e295]:
+              - generic [ref=e296]: Get At Rs. 100 off
+          - generic [ref=e297]:
+            - generic [ref=e298]:
+              - img [ref=e299]
+              - paragraph [ref=e301]: Wallet
+            - heading "Get At Rs. 100 off" [level=1] [ref=e302]:
+              - generic [ref=e303]: Get At Rs. 100 off
+          - generic [ref=e304]:
+            - generic [ref=e305]:
+              - img [ref=e306]
+              - paragraph [ref=e308]: Cash
+            - heading "Get At Rs. 100 off" [level=1] [ref=e309]:
+              - generic [ref=e310]: Get At Rs. 100 off
+    - generic [ref=e311]:
+      - generic [ref=e312]:
+        - img "item-UHJvZHVjdFZhcmlhbnQ6NDQx" [ref=e315]
+        - heading "1 ITEMS - ₹ 2,500" [level=1] [ref=e316]
+      - button "SELECT PAYMENT METHOD" [ref=e317]:
+        - generic [ref=e318]: SELECT PAYMENT METHOD
+  - generic [ref=e319]:
+    - generic [ref=e320]:
+      - generic [ref=e322]:
+        - generic [ref=e323]: Help
+        - generic [ref=e324]:
+          - generic [ref=e325] [cursor=pointer]: Help
+          - generic [ref=e326] [cursor=pointer]: Delivery & Shipping
+          - generic [ref=e327] [cursor=pointer]: Returns
+      - generic [ref=e329]:
+        - generic [ref=e330]: Legals
+        - generic [ref=e331]:
+          - generic [ref=e332] [cursor=pointer]: About Us
+          - generic [ref=e333] [cursor=pointer]: Terms & Conditions
+          - generic [ref=e334] [cursor=pointer]: Privacy Policy
+          - generic [ref=e335] [cursor=pointer]: Returns & Refund
+    - generic [ref=e337]:
+      - generic [ref=e339]:
+        - heading "Contact Us" [level=3] [ref=e340]
+        - generic [ref=e341]:
+          - generic [ref=e342] [cursor=pointer]:
+            - button [ref=e344] [cursor=pointer]:
+              - img [ref=e345] [cursor=pointer]
+            - heading "WhatsApp us at 9916201010" [level=1] [ref=e347] [cursor=pointer]:
+              - generic [ref=e348] [cursor=pointer]: WhatsApp us at 9916201010
+          - generic [ref=e349]:
+            - link "Email us at joyofplay@tenxyou.com" [ref=e350] [cursor=pointer]:
+              - /url: mailto:joyofplay@tenxyou.com?subject=Hello%20Team&body=I%20would%20like%20to%20know%20about...
+              - button [ref=e352] [cursor=pointer]:
+                - img [ref=e353] [cursor=pointer]
+              - heading "Email us at joyofplay@tenxyou.com" [level=1] [ref=e355] [cursor=pointer]:
+                - generic [ref=e356] [cursor=pointer]: Email us at joyofplay@tenxyou.com
+            - link "For any support, write to us at thirdumpire@tenxyou.com" [ref=e357] [cursor=pointer]:
+              - /url: mailto:thirdumpire@tenxyou.com?subject=Hello%20Team&body=I%20would%20like%20to%20know%20about...
+              - button [ref=e359] [cursor=pointer]:
+                - img [ref=e360] [cursor=pointer]
+              - heading "For any support, write to us at thirdumpire@tenxyou.com" [level=1] [ref=e362] [cursor=pointer]:
+                - generic [ref=e363] [cursor=pointer]: For any support, write to us at thirdumpire@tenxyou.com
+          - generic [ref=e364]:
+            - button [ref=e366] [cursor=pointer]:
+              - img [ref=e367] [cursor=pointer]
+            - generic [ref=e369]:
+              - heading "Visit us at:" [level=1] [ref=e370]:
+                - generic [ref=e371]: "Visit us at:"
+              - paragraph [ref=e372]: 5th Main road, 1st Stage Rd, Binnamangala, Indiranagar, Bengaluru, Karnataka 560038
+      - generic [ref=e373]:
+        - generic [ref=e374]:
+          - button [ref=e375] [cursor=pointer]:
+            - img [ref=e376] [cursor=pointer]
+          - button [ref=e378] [cursor=pointer]:
+            - img [ref=e379] [cursor=pointer]
+          - button [ref=e381] [cursor=pointer]:
+            - img [ref=e382] [cursor=pointer]
+        - generic [ref=e384]: © 2025 TenXYou, Inc. All rights reserved
+  - alert [ref=e385]
+```

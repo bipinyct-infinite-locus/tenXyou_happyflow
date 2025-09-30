@@ -1,13 +1,18 @@
+// utils/csvSyncUtil.js
 import fs from "fs";
-import csv from "csv-parser";
+import path from "path";
 
-export async function readCSV(filePath) {
-  return new Promise((resolve, reject) => {
-    const results = [];
-    fs.createReadStream(filePath)
-      .pipe(csv())
-      .on("data", (row) => results.push(row))
-      .on("end", () => resolve(results))
-      .on("error", reject);
+export function readCSVSync(filePath) {
+  const csv = fs.readFileSync(path.resolve(filePath), "utf8");
+  const lines = csv.split("\n").filter((line) => line.trim() !== "");
+  const headers = lines[0].split(",").map((h) => h.trim());
+
+  return lines.slice(1).map((line) => {
+    const values = line.split(",");
+    const obj = {};
+    headers.forEach((header, i) => {
+      obj[header] = (values[i] || "").trim(); // safe even if missing value
+    });
+    return obj;
   });
 }

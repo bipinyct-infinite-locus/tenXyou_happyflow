@@ -1,0 +1,126 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - link "Ambassador" [ref=e5] [cursor=pointer]:
+      - /url: /ambassador
+    - link "Help" [ref=e8] [cursor=pointer]:
+      - /url: /help-faq
+  - generic [ref=e9]:
+    - img "TEN_X_YOU_LOGO" [ref=e12] [cursor=pointer]
+    - generic [ref=e13]:
+      - generic [ref=e15] [cursor=pointer]: Fan series
+      - generic [ref=e18] [cursor=pointer]: Men
+      - generic [ref=e21] [cursor=pointer]: Women
+      - generic [ref=e24] [cursor=pointer]: Shoes
+      - generic [ref=e27] [cursor=pointer]: Apparel
+      - generic [ref=e30] [cursor=pointer]: Acessories
+    - generic [ref=e31]:
+      - button [ref=e32] [cursor=pointer]:
+        - img [ref=e33] [cursor=pointer]
+      - button [ref=e35] [cursor=pointer]:
+        - img [ref=e36] [cursor=pointer]
+      - button [ref=e38] [cursor=pointer]:
+        - img [ref=e39] [cursor=pointer]
+      - button [ref=e41] [cursor=pointer]:
+        - img [ref=e42] [cursor=pointer]
+  - generic [ref=e45]:
+    - generic [ref=e47]:
+      - generic [ref=e49]:
+        - img [ref=e53] [cursor=pointer]
+        - img [ref=e57] [cursor=pointer]
+        - img [ref=e61] [cursor=pointer]
+        - img [ref=e65] [cursor=pointer]
+      - generic [ref=e68]:
+        - button [ref=e69] [cursor=pointer]
+        - button [ref=e71] [cursor=pointer]
+        - button [ref=e73] [cursor=pointer]
+        - button [ref=e75] [cursor=pointer]
+    - generic [ref=e79]:
+      - generic [ref=e81]:
+        - img [ref=e82]
+        - paragraph [ref=e84]: Designed in Berlin & Portland
+      - generic [ref=e86]:
+        - img [ref=e87]
+        - paragraph [ref=e89]: Co-created by Sachin Tendulkar
+      - generic [ref=e91]:
+        - img [ref=e92]
+        - paragraph [ref=e94]: Technology Marker
+    - generic [ref=e95]:
+      - generic [ref=e96]:
+        - heading "Shop By Activity" [level=1] [ref=e97]
+        - generic [ref=e99]:
+          - generic [ref=e100] [cursor=pointer]: Cricket
+          - generic [ref=e101] [cursor=pointer]: Lifestyle
+          - generic [ref=e105] [cursor=pointer]: Running
+          - generic [ref=e106] [cursor=pointer]: Walking
+      - generic [ref=e109]:
+        - img "Lifestyle" [ref=e111]
+        - button "SHOP Lifestyle" [ref=e113]:
+          - generic [ref=e114]: SHOP Lifestyle
+    - generic [ref=e198]:
+      - generic [ref=e200]:
+        - img [ref=e201]
+        - paragraph [ref=e203]: Same-day delivery. On us.
+      - generic [ref=e205]:
+        - img [ref=e206]
+        - paragraph [ref=e208]: Doorstep Try-On / Doorstep Fit Check
+      - generic [ref=e210]:
+        - img [ref=e211]
+        - paragraph [ref=e213]: 14-day returns. No questions asked.
+  - generic [ref=e217]:
+    - generic [ref=e218]:
+      - generic [ref=e220]:
+        - generic [ref=e221]: Help
+        - generic [ref=e222]:
+          - generic [ref=e223] [cursor=pointer]: Help
+          - generic [ref=e224] [cursor=pointer]: Delivery & Shipping
+          - generic [ref=e225] [cursor=pointer]: Returns
+      - generic [ref=e227]:
+        - generic [ref=e228]: Legals
+        - generic [ref=e229]:
+          - generic [ref=e230] [cursor=pointer]: About Us
+          - generic [ref=e231] [cursor=pointer]: Terms & Conditions
+          - generic [ref=e232] [cursor=pointer]: Privacy Policy
+          - generic [ref=e233] [cursor=pointer]: Returns & Refund
+    - generic [ref=e235]:
+      - generic [ref=e237]:
+        - heading "Contact Us" [level=3] [ref=e238]
+        - generic [ref=e239]:
+          - generic [ref=e240] [cursor=pointer]:
+            - button [ref=e242] [cursor=pointer]:
+              - img [ref=e243] [cursor=pointer]
+            - heading "WhatsApp us at 9916201010" [level=1] [ref=e245] [cursor=pointer]:
+              - generic [ref=e246] [cursor=pointer]: WhatsApp us at 9916201010
+          - generic [ref=e247]:
+            - link "Email us at joyofplay@tenxyou.com" [ref=e248] [cursor=pointer]:
+              - /url: mailto:joyofplay@tenxyou.com?subject=Hello%20Team&body=I%20would%20like%20to%20know%20about...
+              - button [ref=e250] [cursor=pointer]:
+                - img [ref=e251] [cursor=pointer]
+              - heading "Email us at joyofplay@tenxyou.com" [level=1] [ref=e253] [cursor=pointer]:
+                - generic [ref=e254] [cursor=pointer]: Email us at joyofplay@tenxyou.com
+            - link "For any support, write to us at thirdumpire@tenxyou.com" [ref=e255] [cursor=pointer]:
+              - /url: mailto:thirdumpire@tenxyou.com?subject=Hello%20Team&body=I%20would%20like%20to%20know%20about...
+              - button [ref=e257] [cursor=pointer]:
+                - img [ref=e258] [cursor=pointer]
+              - heading "For any support, write to us at thirdumpire@tenxyou.com" [level=1] [ref=e260] [cursor=pointer]:
+                - generic [ref=e261] [cursor=pointer]: For any support, write to us at thirdumpire@tenxyou.com
+          - generic [ref=e262]:
+            - button [ref=e264] [cursor=pointer]:
+              - img [ref=e265] [cursor=pointer]
+            - generic [ref=e267]:
+              - heading "Visit us at:" [level=1] [ref=e268]:
+                - generic [ref=e269]: "Visit us at:"
+              - paragraph [ref=e270]: 5th Main road, 1st Stage Rd, Binnamangala, Indiranagar, Bengaluru, Karnataka 560038
+      - generic [ref=e271]:
+        - generic [ref=e272]:
+          - button [ref=e273] [cursor=pointer]:
+            - img [ref=e274] [cursor=pointer]
+          - button [ref=e276] [cursor=pointer]:
+            - img [ref=e277] [cursor=pointer]
+          - button [ref=e279] [cursor=pointer]:
+            - img [ref=e280] [cursor=pointer]
+        - generic [ref=e282]: © 2025 TenXYou, Inc. All rights reserved
+  - alert [ref=e283]: Designed in Berlin & Portland
+```

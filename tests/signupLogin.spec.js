@@ -1,21 +1,20 @@
+// tests/signupLogin.spec.js
 import { test } from "@playwright/test";
-import { readCSV } from "../utils/csvUtil.js";
+import { readCSVSync } from "../utils/csvUtil.js";
 import SignupPage from "../pages/SignupPage.js";
 import LoginPage from "../pages/LoginPage.js";
+import { runHappyFlow } from "../flows/happyFlow.js";
 
-test.describe("Signup → Login Flow - CSV Driven", () => {
-  let users = [];
+// ✅ Read users synchronously at discovery time
+const users = readCSVSync("test-data/users.csv");
+if (!users || users.length === 0) throw new Error("No users found in CSV");
 
-  test.beforeAll(async () => {
-    users = await readCSV("test-data/users.csv");
-    if (!users || users.length === 0) throw new Error("No users found in CSV");
-  });
-
-  test("Signup and immediately login", async ({ page }) => {
-    for (const user of users) {
+test.describe.parallel("Signup → Login → Happy Flow", () => {
+  users.forEach((user) => {
+    test(`User flow for ${user.email}`, async ({ page }) => {
       const signupPage = new SignupPage(page);
+      const loginPage = new LoginPage(page);
 
-      // Make email unique
       const uniqueEmail = `${user.email.split("@")[0]}_${Date.now()}@${
         user.email.split("@")[1]
       }`;
@@ -23,14 +22,14 @@ test.describe("Signup → Login Flow - CSV Driven", () => {
       // --- SIGNUP ---
       await signupPage.goto();
       await signupPage.signup(uniqueEmail, user.password);
-
-      // Wait for success and go to login form
       await signupPage.verifySignupSuccessAndGoToLogin();
 
       // --- LOGIN ---
-      const loginPage = new LoginPage(page);
       await loginPage.login(uniqueEmail, user.password);
       await loginPage.verifyLoginSuccess();
-    }
+
+      // --- HAPPY FLOW ---
+      await runHappyFlow(page);
+    });
   });
 });

@@ -11,7 +11,7 @@
     "grepInvert": null,
     "maxFailures": 0,
     "metadata": {
-      "actualWorkers": 1
+      "actualWorkers": 15
     },
     "preserveOutput": "always",
     "reporter": [
@@ -44,7 +44,7 @@
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
-          "actualWorkers": 1
+          "actualWorkers": 15
         },
         "id": "chromium",
         "name": "chromium",
@@ -53,67 +53,1042 @@
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
-        "timeout": 30000
+        "timeout": 120000
       }
     ],
     "shard": null,
     "updateSnapshots": "missing",
     "updateSourceMethod": "patch",
     "version": "1.55.1",
-    "workers": 6,
+    "workers": 15,
     "webServer": null
   },
   "suites": [
     {
-      "title": "happyFlow.spec.js",
-      "file": "happyFlow.spec.js",
+      "title": "signupLogin.spec.js",
+      "file": "signupLogin.spec.js",
       "column": 0,
       "line": 0,
-      "specs": [
+      "specs": [],
+      "suites": [
         {
-          "title": "Happy Flow with waits",
-          "ok": true,
-          "tags": [],
-          "tests": [
+          "title": "Signup → Login → Happy Flow",
+          "file": "signupLogin.spec.js",
+          "line": 12,
+          "column": 15,
+          "specs": [
             {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
+              "title": "User flow for user1@gmail.com",
+              "ok": true,
+              "tags": [
+                "gmail.com"
+              ],
+              "tests": [
                 {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 23371,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-09-30T09:25:58.739Z",
+                  "timeout": 120000,
                   "annotations": [],
-                  "attachments": []
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 80353,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T10:39:42.903Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
-              "status": "expected"
+              "id": "dd24da0af4ed1e4578c9-d53ddad10d7869f5c798",
+              "file": "signupLogin.spec.js",
+              "line": 14,
+              "column": 9
+            },
+            {
+              "title": "User flow for user2@gmail.com",
+              "ok": false,
+              "tags": [
+                "gmail.com"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 123446,
+                      "error": {
+                        "message": "TimeoutError: page.goto: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://tenxyou.infinitelocus.com/checkout\", waiting until \"networkidle\"\u001b[22m\n",
+                        "stack": "TimeoutError: page.goto: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://tenxyou.infinitelocus.com/checkout\", waiting until \"networkidle\"\u001b[22m\n\n    at runHappyFlow (C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js:85:14)\n    at C:\\Users\\bipin\\tenxyou-web-automation\\tests\\signupLogin.spec.js:32:7",
+                        "location": {
+                          "file": "C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js",
+                          "column": 14,
+                          "line": 85
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\flows\\happyFlow.js:85\n\n\u001b[0m \u001b[90m 83 |\u001b[39m   \u001b[36mconst\u001b[39m checkoutBtn \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"button\"\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m\"CHECKOUT\"\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 84 |\u001b[39m   \u001b[36mawait\u001b[39m checkoutBtn\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 85 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://tenxyou.infinitelocus.com/checkout\"\u001b[39m\u001b[33m,\u001b[39m {\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 86 |\u001b[39m     waitUntil\u001b[33m:\u001b[39m \u001b[32m\"networkidle\"\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 87 |\u001b[39m     timeout\u001b[33m:\u001b[39m \u001b[35m60000\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 88 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js",
+                            "column": 14,
+                            "line": 85
+                          },
+                          "message": "TimeoutError: page.goto: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://tenxyou.infinitelocus.com/checkout\", waiting until \"networkidle\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\flows\\happyFlow.js:85\n\n\u001b[0m \u001b[90m 83 |\u001b[39m   \u001b[36mconst\u001b[39m checkoutBtn \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"button\"\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m\"CHECKOUT\"\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 84 |\u001b[39m   \u001b[36mawait\u001b[39m checkoutBtn\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 85 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://tenxyou.infinitelocus.com/checkout\"\u001b[39m\u001b[33m,\u001b[39m {\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 86 |\u001b[39m     waitUntil\u001b[33m:\u001b[39m \u001b[32m\"networkidle\"\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 87 |\u001b[39m     timeout\u001b[33m:\u001b[39m \u001b[35m60000\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 88 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at runHappyFlow (C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js:85:14)\u001b[22m\n\u001b[2m    at C:\\Users\\bipin\\tenxyou-web-automation\\tests\\signupLogin.spec.js:32:7\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T10:39:42.480Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\bipin\\tenxyou-web-automation\\test-results\\signupLogin-Signup-→-Login-c3bad-er-flow-for-user2-gmail-com-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\bipin\\tenxyou-web-automation\\test-results\\signupLogin-Signup-→-Login-c3bad-er-flow-for-user2-gmail-com-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js",
+                        "column": 14,
+                        "line": 85
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "dd24da0af4ed1e4578c9-2667bd5d178b30ebb016",
+              "file": "signupLogin.spec.js",
+              "line": 14,
+              "column": 9
+            },
+            {
+              "title": "User flow for user3@gmail.com",
+              "ok": false,
+              "tags": [
+                "gmail.com"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 80954,
+                      "error": {
+                        "message": "TimeoutError: page.waitForLoadState: Timeout 15000ms exceeded.",
+                        "stack": "TimeoutError: page.waitForLoadState: Timeout 15000ms exceeded.\n    at runHappyFlow (C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js:4:14)\n    at C:\\Users\\bipin\\tenxyou-web-automation\\tests\\signupLogin.spec.js:32:25",
+                        "location": {
+                          "file": "C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js",
+                          "column": 14,
+                          "line": 4
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\flows\\happyFlow.js:4\n\n\u001b[0m \u001b[90m 2 |\u001b[39m\n \u001b[90m 3 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m runHappyFlow(page) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 4 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m\"networkidle\"\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// make sure all resources are loaded\u001b[39m\n \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 5 |\u001b[39m\n \u001b[90m 6 |\u001b[39m   \u001b[90m// --- OPEN ADDRESS MENU ---\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mconst\u001b[39m menuBtn \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"button:nth-child(3)\"\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js",
+                            "column": 14,
+                            "line": 4
+                          },
+                          "message": "TimeoutError: page.waitForLoadState: Timeout 15000ms exceeded.\n\n\u001b[90m   at \u001b[39m..\\flows\\happyFlow.js:4\n\n\u001b[0m \u001b[90m 2 |\u001b[39m\n \u001b[90m 3 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m runHappyFlow(page) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 4 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m\"networkidle\"\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// make sure all resources are loaded\u001b[39m\n \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 5 |\u001b[39m\n \u001b[90m 6 |\u001b[39m   \u001b[90m// --- OPEN ADDRESS MENU ---\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mconst\u001b[39m menuBtn \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"button:nth-child(3)\"\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at runHappyFlow (C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js:4:14)\u001b[22m\n\u001b[2m    at C:\\Users\\bipin\\tenxyou-web-automation\\tests\\signupLogin.spec.js:32:25\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T10:39:42.751Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\bipin\\tenxyou-web-automation\\test-results\\signupLogin-Signup-→-Login-097d8-er-flow-for-user3-gmail-com-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\bipin\\tenxyou-web-automation\\test-results\\signupLogin-Signup-→-Login-097d8-er-flow-for-user3-gmail-com-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js",
+                        "column": 14,
+                        "line": 4
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "dd24da0af4ed1e4578c9-65e5ab5bb94e9a3cddd3",
+              "file": "signupLogin.spec.js",
+              "line": 14,
+              "column": 9
+            },
+            {
+              "title": "User flow for user4@gmail.com",
+              "ok": false,
+              "tags": [
+                "gmail.com"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "failed",
+                      "duration": 79680,
+                      "error": {
+                        "message": "TimeoutError: page.waitForLoadState: Timeout 15000ms exceeded.",
+                        "stack": "TimeoutError: page.waitForLoadState: Timeout 15000ms exceeded.\n    at runHappyFlow (C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js:4:14)\n    at C:\\Users\\bipin\\tenxyou-web-automation\\tests\\signupLogin.spec.js:32:25",
+                        "location": {
+                          "file": "C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js",
+                          "column": 14,
+                          "line": 4
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\flows\\happyFlow.js:4\n\n\u001b[0m \u001b[90m 2 |\u001b[39m\n \u001b[90m 3 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m runHappyFlow(page) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 4 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m\"networkidle\"\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// make sure all resources are loaded\u001b[39m\n \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 5 |\u001b[39m\n \u001b[90m 6 |\u001b[39m   \u001b[90m// --- OPEN ADDRESS MENU ---\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mconst\u001b[39m menuBtn \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"button:nth-child(3)\"\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js",
+                            "column": 14,
+                            "line": 4
+                          },
+                          "message": "TimeoutError: page.waitForLoadState: Timeout 15000ms exceeded.\n\n\u001b[90m   at \u001b[39m..\\flows\\happyFlow.js:4\n\n\u001b[0m \u001b[90m 2 |\u001b[39m\n \u001b[90m 3 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m runHappyFlow(page) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 4 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m\"networkidle\"\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// make sure all resources are loaded\u001b[39m\n \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 5 |\u001b[39m\n \u001b[90m 6 |\u001b[39m   \u001b[90m// --- OPEN ADDRESS MENU ---\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mconst\u001b[39m menuBtn \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"button:nth-child(3)\"\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at runHappyFlow (C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js:4:14)\u001b[22m\n\u001b[2m    at C:\\Users\\bipin\\tenxyou-web-automation\\tests\\signupLogin.spec.js:32:25\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T10:39:42.626Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "C:\\Users\\bipin\\tenxyou-web-automation\\test-results\\signupLogin-Signup-→-Login-2e1bf-er-flow-for-user4-gmail-com-chromium\\test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\bipin\\tenxyou-web-automation\\test-results\\signupLogin-Signup-→-Login-2e1bf-er-flow-for-user4-gmail-com-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\bipin\\tenxyou-web-automation\\test-results\\signupLogin-Signup-→-Login-2e1bf-er-flow-for-user4-gmail-com-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js",
+                        "column": 14,
+                        "line": 4
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "dd24da0af4ed1e4578c9-20676eca2ed1c8ec259e",
+              "file": "signupLogin.spec.js",
+              "line": 14,
+              "column": 9
+            },
+            {
+              "title": "User flow for user5@gmail.com",
+              "ok": false,
+              "tags": [
+                "gmail.com"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 4,
+                      "status": "failed",
+                      "duration": 80671,
+                      "error": {
+                        "message": "TimeoutError: page.waitForLoadState: Timeout 15000ms exceeded.",
+                        "stack": "TimeoutError: page.waitForLoadState: Timeout 15000ms exceeded.\n    at runHappyFlow (C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js:4:14)\n    at C:\\Users\\bipin\\tenxyou-web-automation\\tests\\signupLogin.spec.js:32:25",
+                        "location": {
+                          "file": "C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js",
+                          "column": 14,
+                          "line": 4
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\flows\\happyFlow.js:4\n\n\u001b[0m \u001b[90m 2 |\u001b[39m\n \u001b[90m 3 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m runHappyFlow(page) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 4 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m\"networkidle\"\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// make sure all resources are loaded\u001b[39m\n \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 5 |\u001b[39m\n \u001b[90m 6 |\u001b[39m   \u001b[90m// --- OPEN ADDRESS MENU ---\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mconst\u001b[39m menuBtn \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"button:nth-child(3)\"\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js",
+                            "column": 14,
+                            "line": 4
+                          },
+                          "message": "TimeoutError: page.waitForLoadState: Timeout 15000ms exceeded.\n\n\u001b[90m   at \u001b[39m..\\flows\\happyFlow.js:4\n\n\u001b[0m \u001b[90m 2 |\u001b[39m\n \u001b[90m 3 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m runHappyFlow(page) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 4 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m\"networkidle\"\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// make sure all resources are loaded\u001b[39m\n \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 5 |\u001b[39m\n \u001b[90m 6 |\u001b[39m   \u001b[90m// --- OPEN ADDRESS MENU ---\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mconst\u001b[39m menuBtn \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"button:nth-child(3)\"\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at runHappyFlow (C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js:4:14)\u001b[22m\n\u001b[2m    at C:\\Users\\bipin\\tenxyou-web-automation\\tests\\signupLogin.spec.js:32:25\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T10:39:42.730Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\bipin\\tenxyou-web-automation\\test-results\\signupLogin-Signup-→-Login-fdeac-er-flow-for-user5-gmail-com-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\bipin\\tenxyou-web-automation\\test-results\\signupLogin-Signup-→-Login-fdeac-er-flow-for-user5-gmail-com-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js",
+                        "column": 14,
+                        "line": 4
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "dd24da0af4ed1e4578c9-0373241c662ebf1d5b6a",
+              "file": "signupLogin.spec.js",
+              "line": 14,
+              "column": 9
+            },
+            {
+              "title": "User flow for user6@gmail.com",
+              "ok": true,
+              "tags": [
+                "gmail.com"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 5,
+                      "status": "passed",
+                      "duration": 97375,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T10:39:42.900Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "dd24da0af4ed1e4578c9-c582b6e5d49a3dd33a7e",
+              "file": "signupLogin.spec.js",
+              "line": 14,
+              "column": 9
+            },
+            {
+              "title": "User flow for user7@gmail.com",
+              "ok": false,
+              "tags": [
+                "gmail.com"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 6,
+                      "parallelIndex": 6,
+                      "status": "failed",
+                      "duration": 119987,
+                      "error": {
+                        "message": "TimeoutError: page.waitForLoadState: Timeout 15000ms exceeded.",
+                        "stack": "TimeoutError: page.waitForLoadState: Timeout 15000ms exceeded.\n    at runHappyFlow (C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js:4:14)\n    at C:\\Users\\bipin\\tenxyou-web-automation\\tests\\signupLogin.spec.js:32:25",
+                        "location": {
+                          "file": "C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js",
+                          "column": 14,
+                          "line": 4
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\flows\\happyFlow.js:4\n\n\u001b[0m \u001b[90m 2 |\u001b[39m\n \u001b[90m 3 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m runHappyFlow(page) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 4 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m\"networkidle\"\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// make sure all resources are loaded\u001b[39m\n \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 5 |\u001b[39m\n \u001b[90m 6 |\u001b[39m   \u001b[90m// --- OPEN ADDRESS MENU ---\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mconst\u001b[39m menuBtn \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"button:nth-child(3)\"\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js",
+                            "column": 14,
+                            "line": 4
+                          },
+                          "message": "TimeoutError: page.waitForLoadState: Timeout 15000ms exceeded.\n\n\u001b[90m   at \u001b[39m..\\flows\\happyFlow.js:4\n\n\u001b[0m \u001b[90m 2 |\u001b[39m\n \u001b[90m 3 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m runHappyFlow(page) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 4 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m\"networkidle\"\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// make sure all resources are loaded\u001b[39m\n \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 5 |\u001b[39m\n \u001b[90m 6 |\u001b[39m   \u001b[90m// --- OPEN ADDRESS MENU ---\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mconst\u001b[39m menuBtn \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"button:nth-child(3)\"\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at runHappyFlow (C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js:4:14)\u001b[22m\n\u001b[2m    at C:\\Users\\bipin\\tenxyou-web-automation\\tests\\signupLogin.spec.js:32:25\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T10:39:42.937Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\bipin\\tenxyou-web-automation\\test-results\\signupLogin-Signup-→-Login-4a239-er-flow-for-user7-gmail-com-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\bipin\\tenxyou-web-automation\\test-results\\signupLogin-Signup-→-Login-4a239-er-flow-for-user7-gmail-com-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js",
+                        "column": 14,
+                        "line": 4
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "dd24da0af4ed1e4578c9-c41c5aea4c132eac1a2d",
+              "file": "signupLogin.spec.js",
+              "line": 14,
+              "column": 9
+            },
+            {
+              "title": "User flow for user8@gmail.com",
+              "ok": false,
+              "tags": [
+                "gmail.com"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 7,
+                      "parallelIndex": 7,
+                      "status": "failed",
+                      "duration": 106217,
+                      "error": {
+                        "message": "TimeoutError: page.goto: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://tenxyou.infinitelocus.com/auth\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "TimeoutError: page.goto: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://tenxyou.infinitelocus.com/auth\", waiting until \"load\"\u001b[22m\n\n    at SignupPage.goto (C:\\Users\\bipin\\tenxyou-web-automation\\pages\\SignupPage.js:19:21)\n    at C:\\Users\\bipin\\tenxyou-web-automation\\tests\\signupLogin.spec.js:23:24",
+                        "location": {
+                          "file": "C:\\Users\\bipin\\tenxyou-web-automation\\pages\\SignupPage.js",
+                          "column": 21,
+                          "line": 19
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\pages\\SignupPage.js:19\n\n\u001b[0m \u001b[90m 17 |\u001b[39m\n \u001b[90m 18 |\u001b[39m   \u001b[36masync\u001b[39m goto() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[32m\"/auth\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   }\n \u001b[90m 21 |\u001b[39m\n \u001b[90m 22 |\u001b[39m   \u001b[36masync\u001b[39m signup(email\u001b[33m,\u001b[39m password) {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\bipin\\tenxyou-web-automation\\pages\\SignupPage.js",
+                            "column": 21,
+                            "line": 19
+                          },
+                          "message": "TimeoutError: page.goto: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://tenxyou.infinitelocus.com/auth\", waiting until \"load\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\SignupPage.js:19\n\n\u001b[0m \u001b[90m 17 |\u001b[39m\n \u001b[90m 18 |\u001b[39m   \u001b[36masync\u001b[39m goto() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[32m\"/auth\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   }\n \u001b[90m 21 |\u001b[39m\n \u001b[90m 22 |\u001b[39m   \u001b[36masync\u001b[39m signup(email\u001b[33m,\u001b[39m password) {\u001b[0m\n\u001b[2m    at SignupPage.goto (C:\\Users\\bipin\\tenxyou-web-automation\\pages\\SignupPage.js:19:21)\u001b[22m\n\u001b[2m    at C:\\Users\\bipin\\tenxyou-web-automation\\tests\\signupLogin.spec.js:23:24\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T10:39:43.082Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\bipin\\tenxyou-web-automation\\test-results\\signupLogin-Signup-→-Login-1cdb4-er-flow-for-user8-gmail-com-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\bipin\\tenxyou-web-automation\\test-results\\signupLogin-Signup-→-Login-1cdb4-er-flow-for-user8-gmail-com-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\bipin\\tenxyou-web-automation\\pages\\SignupPage.js",
+                        "column": 21,
+                        "line": 19
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "dd24da0af4ed1e4578c9-5e2bdd4c64cc5241d5d9",
+              "file": "signupLogin.spec.js",
+              "line": 14,
+              "column": 9
+            },
+            {
+              "title": "User flow for user9@gmail.com",
+              "ok": false,
+              "tags": [
+                "gmail.com"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 8,
+                      "parallelIndex": 8,
+                      "status": "failed",
+                      "duration": 119726,
+                      "error": {
+                        "message": "TimeoutError: page.waitForLoadState: Timeout 15000ms exceeded.",
+                        "stack": "TimeoutError: page.waitForLoadState: Timeout 15000ms exceeded.\n    at runHappyFlow (C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js:4:14)\n    at C:\\Users\\bipin\\tenxyou-web-automation\\tests\\signupLogin.spec.js:32:25",
+                        "location": {
+                          "file": "C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js",
+                          "column": 14,
+                          "line": 4
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\flows\\happyFlow.js:4\n\n\u001b[0m \u001b[90m 2 |\u001b[39m\n \u001b[90m 3 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m runHappyFlow(page) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 4 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m\"networkidle\"\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// make sure all resources are loaded\u001b[39m\n \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 5 |\u001b[39m\n \u001b[90m 6 |\u001b[39m   \u001b[90m// --- OPEN ADDRESS MENU ---\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mconst\u001b[39m menuBtn \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"button:nth-child(3)\"\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js",
+                            "column": 14,
+                            "line": 4
+                          },
+                          "message": "TimeoutError: page.waitForLoadState: Timeout 15000ms exceeded.\n\n\u001b[90m   at \u001b[39m..\\flows\\happyFlow.js:4\n\n\u001b[0m \u001b[90m 2 |\u001b[39m\n \u001b[90m 3 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m runHappyFlow(page) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 4 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m\"networkidle\"\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// make sure all resources are loaded\u001b[39m\n \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 5 |\u001b[39m\n \u001b[90m 6 |\u001b[39m   \u001b[90m// --- OPEN ADDRESS MENU ---\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mconst\u001b[39m menuBtn \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"button:nth-child(3)\"\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at runHappyFlow (C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js:4:14)\u001b[22m\n\u001b[2m    at C:\\Users\\bipin\\tenxyou-web-automation\\tests\\signupLogin.spec.js:32:25\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T10:39:42.887Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\bipin\\tenxyou-web-automation\\test-results\\signupLogin-Signup-→-Login-3711e-er-flow-for-user9-gmail-com-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\bipin\\tenxyou-web-automation\\test-results\\signupLogin-Signup-→-Login-3711e-er-flow-for-user9-gmail-com-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js",
+                        "column": 14,
+                        "line": 4
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "dd24da0af4ed1e4578c9-a111eadf541e179d92a0",
+              "file": "signupLogin.spec.js",
+              "line": 14,
+              "column": 9
+            },
+            {
+              "title": "User flow for user10@gmail.com",
+              "ok": false,
+              "tags": [
+                "gmail.com"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 9,
+                      "parallelIndex": 9,
+                      "status": "failed",
+                      "duration": 106031,
+                      "error": {
+                        "message": "TimeoutError: page.goto: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://tenxyou.infinitelocus.com/auth\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "TimeoutError: page.goto: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://tenxyou.infinitelocus.com/auth\", waiting until \"load\"\u001b[22m\n\n    at SignupPage.goto (C:\\Users\\bipin\\tenxyou-web-automation\\pages\\SignupPage.js:19:21)\n    at C:\\Users\\bipin\\tenxyou-web-automation\\tests\\signupLogin.spec.js:23:24",
+                        "location": {
+                          "file": "C:\\Users\\bipin\\tenxyou-web-automation\\pages\\SignupPage.js",
+                          "column": 21,
+                          "line": 19
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\pages\\SignupPage.js:19\n\n\u001b[0m \u001b[90m 17 |\u001b[39m\n \u001b[90m 18 |\u001b[39m   \u001b[36masync\u001b[39m goto() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[32m\"/auth\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   }\n \u001b[90m 21 |\u001b[39m\n \u001b[90m 22 |\u001b[39m   \u001b[36masync\u001b[39m signup(email\u001b[33m,\u001b[39m password) {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\bipin\\tenxyou-web-automation\\pages\\SignupPage.js",
+                            "column": 21,
+                            "line": 19
+                          },
+                          "message": "TimeoutError: page.goto: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://tenxyou.infinitelocus.com/auth\", waiting until \"load\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\SignupPage.js:19\n\n\u001b[0m \u001b[90m 17 |\u001b[39m\n \u001b[90m 18 |\u001b[39m   \u001b[36masync\u001b[39m goto() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[32m\"/auth\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   }\n \u001b[90m 21 |\u001b[39m\n \u001b[90m 22 |\u001b[39m   \u001b[36masync\u001b[39m signup(email\u001b[33m,\u001b[39m password) {\u001b[0m\n\u001b[2m    at SignupPage.goto (C:\\Users\\bipin\\tenxyou-web-automation\\pages\\SignupPage.js:19:21)\u001b[22m\n\u001b[2m    at C:\\Users\\bipin\\tenxyou-web-automation\\tests\\signupLogin.spec.js:23:24\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T10:39:43.065Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\bipin\\tenxyou-web-automation\\test-results\\signupLogin-Signup-→-Login-63141-r-flow-for-user10-gmail-com-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\bipin\\tenxyou-web-automation\\test-results\\signupLogin-Signup-→-Login-63141-r-flow-for-user10-gmail-com-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\bipin\\tenxyou-web-automation\\pages\\SignupPage.js",
+                        "column": 21,
+                        "line": 19
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "dd24da0af4ed1e4578c9-49e26fb07ee548967d4e",
+              "file": "signupLogin.spec.js",
+              "line": 14,
+              "column": 9
+            },
+            {
+              "title": "User flow for user11@gmail.com",
+              "ok": false,
+              "tags": [
+                "gmail.com"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 10,
+                      "parallelIndex": 10,
+                      "status": "failed",
+                      "duration": 120095,
+                      "error": {
+                        "message": "TimeoutError: page.waitForLoadState: Timeout 15000ms exceeded.",
+                        "stack": "TimeoutError: page.waitForLoadState: Timeout 15000ms exceeded.\n    at runHappyFlow (C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js:4:14)\n    at C:\\Users\\bipin\\tenxyou-web-automation\\tests\\signupLogin.spec.js:32:25",
+                        "location": {
+                          "file": "C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js",
+                          "column": 14,
+                          "line": 4
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\flows\\happyFlow.js:4\n\n\u001b[0m \u001b[90m 2 |\u001b[39m\n \u001b[90m 3 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m runHappyFlow(page) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 4 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m\"networkidle\"\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// make sure all resources are loaded\u001b[39m\n \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 5 |\u001b[39m\n \u001b[90m 6 |\u001b[39m   \u001b[90m// --- OPEN ADDRESS MENU ---\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mconst\u001b[39m menuBtn \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"button:nth-child(3)\"\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js",
+                            "column": 14,
+                            "line": 4
+                          },
+                          "message": "TimeoutError: page.waitForLoadState: Timeout 15000ms exceeded.\n\n\u001b[90m   at \u001b[39m..\\flows\\happyFlow.js:4\n\n\u001b[0m \u001b[90m 2 |\u001b[39m\n \u001b[90m 3 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m runHappyFlow(page) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 4 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m\"networkidle\"\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// make sure all resources are loaded\u001b[39m\n \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 5 |\u001b[39m\n \u001b[90m 6 |\u001b[39m   \u001b[90m// --- OPEN ADDRESS MENU ---\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mconst\u001b[39m menuBtn \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"button:nth-child(3)\"\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at runHappyFlow (C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js:4:14)\u001b[22m\n\u001b[2m    at C:\\Users\\bipin\\tenxyou-web-automation\\tests\\signupLogin.spec.js:32:25\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T10:39:42.957Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\bipin\\tenxyou-web-automation\\test-results\\signupLogin-Signup-→-Login-dcd81-r-flow-for-user11-gmail-com-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\bipin\\tenxyou-web-automation\\test-results\\signupLogin-Signup-→-Login-dcd81-r-flow-for-user11-gmail-com-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js",
+                        "column": 14,
+                        "line": 4
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "dd24da0af4ed1e4578c9-85a80cc1c47f22927674",
+              "file": "signupLogin.spec.js",
+              "line": 14,
+              "column": 9
+            },
+            {
+              "title": "User flow for user12@gmail.com",
+              "ok": false,
+              "tags": [
+                "gmail.com"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 11,
+                      "parallelIndex": 11,
+                      "status": "failed",
+                      "duration": 103736,
+                      "error": {
+                        "message": "TimeoutError: page.goto: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://tenxyou.infinitelocus.com/auth\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "TimeoutError: page.goto: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://tenxyou.infinitelocus.com/auth\", waiting until \"load\"\u001b[22m\n\n    at SignupPage.goto (C:\\Users\\bipin\\tenxyou-web-automation\\pages\\SignupPage.js:19:21)\n    at C:\\Users\\bipin\\tenxyou-web-automation\\tests\\signupLogin.spec.js:23:24",
+                        "location": {
+                          "file": "C:\\Users\\bipin\\tenxyou-web-automation\\pages\\SignupPage.js",
+                          "column": 21,
+                          "line": 19
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\pages\\SignupPage.js:19\n\n\u001b[0m \u001b[90m 17 |\u001b[39m\n \u001b[90m 18 |\u001b[39m   \u001b[36masync\u001b[39m goto() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[32m\"/auth\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   }\n \u001b[90m 21 |\u001b[39m\n \u001b[90m 22 |\u001b[39m   \u001b[36masync\u001b[39m signup(email\u001b[33m,\u001b[39m password) {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\bipin\\tenxyou-web-automation\\pages\\SignupPage.js",
+                            "column": 21,
+                            "line": 19
+                          },
+                          "message": "TimeoutError: page.goto: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://tenxyou.infinitelocus.com/auth\", waiting until \"load\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\SignupPage.js:19\n\n\u001b[0m \u001b[90m 17 |\u001b[39m\n \u001b[90m 18 |\u001b[39m   \u001b[36masync\u001b[39m goto() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[32m\"/auth\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   }\n \u001b[90m 21 |\u001b[39m\n \u001b[90m 22 |\u001b[39m   \u001b[36masync\u001b[39m signup(email\u001b[33m,\u001b[39m password) {\u001b[0m\n\u001b[2m    at SignupPage.goto (C:\\Users\\bipin\\tenxyou-web-automation\\pages\\SignupPage.js:19:21)\u001b[22m\n\u001b[2m    at C:\\Users\\bipin\\tenxyou-web-automation\\tests\\signupLogin.spec.js:23:24\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T10:39:43.232Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\bipin\\tenxyou-web-automation\\test-results\\signupLogin-Signup-→-Login-60c3a-r-flow-for-user12-gmail-com-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\bipin\\tenxyou-web-automation\\test-results\\signupLogin-Signup-→-Login-60c3a-r-flow-for-user12-gmail-com-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\bipin\\tenxyou-web-automation\\pages\\SignupPage.js",
+                        "column": 21,
+                        "line": 19
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "dd24da0af4ed1e4578c9-2a492e4d317f6c3528e7",
+              "file": "signupLogin.spec.js",
+              "line": 14,
+              "column": 9
+            },
+            {
+              "title": "User flow for user13@gmail.com",
+              "ok": false,
+              "tags": [
+                "gmail.com"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 12,
+                      "parallelIndex": 12,
+                      "status": "failed",
+                      "duration": 127893,
+                      "error": {
+                        "message": "TimeoutError: page.goto: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://tenxyou.infinitelocus.com/checkout\", waiting until \"networkidle\"\u001b[22m\n",
+                        "stack": "TimeoutError: page.goto: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://tenxyou.infinitelocus.com/checkout\", waiting until \"networkidle\"\u001b[22m\n\n    at runHappyFlow (C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js:85:14)\n    at C:\\Users\\bipin\\tenxyou-web-automation\\tests\\signupLogin.spec.js:32:7",
+                        "location": {
+                          "file": "C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js",
+                          "column": 14,
+                          "line": 85
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\flows\\happyFlow.js:85\n\n\u001b[0m \u001b[90m 83 |\u001b[39m   \u001b[36mconst\u001b[39m checkoutBtn \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"button\"\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m\"CHECKOUT\"\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 84 |\u001b[39m   \u001b[36mawait\u001b[39m checkoutBtn\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 85 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://tenxyou.infinitelocus.com/checkout\"\u001b[39m\u001b[33m,\u001b[39m {\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 86 |\u001b[39m     waitUntil\u001b[33m:\u001b[39m \u001b[32m\"networkidle\"\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 87 |\u001b[39m     timeout\u001b[33m:\u001b[39m \u001b[35m60000\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 88 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js",
+                            "column": 14,
+                            "line": 85
+                          },
+                          "message": "TimeoutError: page.goto: Timeout 60000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://tenxyou.infinitelocus.com/checkout\", waiting until \"networkidle\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\flows\\happyFlow.js:85\n\n\u001b[0m \u001b[90m 83 |\u001b[39m   \u001b[36mconst\u001b[39m checkoutBtn \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"button\"\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m\"CHECKOUT\"\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 84 |\u001b[39m   \u001b[36mawait\u001b[39m checkoutBtn\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 85 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://tenxyou.infinitelocus.com/checkout\"\u001b[39m\u001b[33m,\u001b[39m {\n \u001b[90m    |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 86 |\u001b[39m     waitUntil\u001b[33m:\u001b[39m \u001b[32m\"networkidle\"\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 87 |\u001b[39m     timeout\u001b[33m:\u001b[39m \u001b[35m60000\u001b[39m\u001b[33m,\u001b[39m\n \u001b[90m 88 |\u001b[39m   })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at runHappyFlow (C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js:85:14)\u001b[22m\n\u001b[2m    at C:\\Users\\bipin\\tenxyou-web-automation\\tests\\signupLogin.spec.js:32:7\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T10:39:42.792Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\bipin\\tenxyou-web-automation\\test-results\\signupLogin-Signup-→-Login-c040b-r-flow-for-user13-gmail-com-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\bipin\\tenxyou-web-automation\\test-results\\signupLogin-Signup-→-Login-c040b-r-flow-for-user13-gmail-com-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js",
+                        "column": 14,
+                        "line": 85
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "dd24da0af4ed1e4578c9-35098d5c7da614458b62",
+              "file": "signupLogin.spec.js",
+              "line": 14,
+              "column": 9
+            },
+            {
+              "title": "User flow for user14@gmail.com",
+              "ok": false,
+              "tags": [
+                "gmail.com"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 13,
+                      "parallelIndex": 13,
+                      "status": "failed",
+                      "duration": 117977,
+                      "error": {
+                        "message": "TimeoutError: page.waitForLoadState: Timeout 15000ms exceeded.",
+                        "stack": "TimeoutError: page.waitForLoadState: Timeout 15000ms exceeded.\n    at runHappyFlow (C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js:4:14)\n    at C:\\Users\\bipin\\tenxyou-web-automation\\tests\\signupLogin.spec.js:32:25",
+                        "location": {
+                          "file": "C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js",
+                          "column": 14,
+                          "line": 4
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\flows\\happyFlow.js:4\n\n\u001b[0m \u001b[90m 2 |\u001b[39m\n \u001b[90m 3 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m runHappyFlow(page) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 4 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m\"networkidle\"\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// make sure all resources are loaded\u001b[39m\n \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 5 |\u001b[39m\n \u001b[90m 6 |\u001b[39m   \u001b[90m// --- OPEN ADDRESS MENU ---\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mconst\u001b[39m menuBtn \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"button:nth-child(3)\"\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js",
+                            "column": 14,
+                            "line": 4
+                          },
+                          "message": "TimeoutError: page.waitForLoadState: Timeout 15000ms exceeded.\n\n\u001b[90m   at \u001b[39m..\\flows\\happyFlow.js:4\n\n\u001b[0m \u001b[90m 2 |\u001b[39m\n \u001b[90m 3 |\u001b[39m \u001b[36mexport\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m runHappyFlow(page) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 4 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForLoadState(\u001b[32m\"networkidle\"\u001b[39m)\u001b[33m;\u001b[39m \u001b[90m// make sure all resources are loaded\u001b[39m\n \u001b[90m   |\u001b[39m              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 5 |\u001b[39m\n \u001b[90m 6 |\u001b[39m   \u001b[90m// --- OPEN ADDRESS MENU ---\u001b[39m\n \u001b[90m 7 |\u001b[39m   \u001b[36mconst\u001b[39m menuBtn \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"button:nth-child(3)\"\u001b[39m)\u001b[33m.\u001b[39mfirst()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at runHappyFlow (C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js:4:14)\u001b[22m\n\u001b[2m    at C:\\Users\\bipin\\tenxyou-web-automation\\tests\\signupLogin.spec.js:32:25\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T10:39:43.127Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\bipin\\tenxyou-web-automation\\test-results\\signupLogin-Signup-→-Login-9eebe-r-flow-for-user14-gmail-com-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\bipin\\tenxyou-web-automation\\test-results\\signupLogin-Signup-→-Login-9eebe-r-flow-for-user14-gmail-com-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\bipin\\tenxyou-web-automation\\flows\\happyFlow.js",
+                        "column": 14,
+                        "line": 4
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "dd24da0af4ed1e4578c9-3e608a9eedd5111102e2",
+              "file": "signupLogin.spec.js",
+              "line": 14,
+              "column": 9
+            },
+            {
+              "title": "User flow for user15@gmail.com",
+              "ok": false,
+              "tags": [
+                "gmail.com"
+              ],
+              "tests": [
+                {
+                  "timeout": 120000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 14,
+                      "parallelIndex": 14,
+                      "status": "failed",
+                      "duration": 104572,
+                      "error": {
+                        "message": "TimeoutError: page.goto: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://tenxyou.infinitelocus.com/auth\", waiting until \"load\"\u001b[22m\n",
+                        "stack": "TimeoutError: page.goto: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://tenxyou.infinitelocus.com/auth\", waiting until \"load\"\u001b[22m\n\n    at SignupPage.goto (C:\\Users\\bipin\\tenxyou-web-automation\\pages\\SignupPage.js:19:21)\n    at C:\\Users\\bipin\\tenxyou-web-automation\\tests\\signupLogin.spec.js:23:24",
+                        "location": {
+                          "file": "C:\\Users\\bipin\\tenxyou-web-automation\\pages\\SignupPage.js",
+                          "column": 21,
+                          "line": 19
+                        },
+                        "snippet": "\u001b[90m   at \u001b[39m..\\pages\\SignupPage.js:19\n\n\u001b[0m \u001b[90m 17 |\u001b[39m\n \u001b[90m 18 |\u001b[39m   \u001b[36masync\u001b[39m goto() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[32m\"/auth\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   }\n \u001b[90m 21 |\u001b[39m\n \u001b[90m 22 |\u001b[39m   \u001b[36masync\u001b[39m signup(email\u001b[33m,\u001b[39m password) {\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\bipin\\tenxyou-web-automation\\pages\\SignupPage.js",
+                            "column": 21,
+                            "line": 19
+                          },
+                          "message": "TimeoutError: page.goto: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://tenxyou.infinitelocus.com/auth\", waiting until \"load\"\u001b[22m\n\n\n\u001b[90m   at \u001b[39m..\\pages\\SignupPage.js:19\n\n\u001b[0m \u001b[90m 17 |\u001b[39m\n \u001b[90m 18 |\u001b[39m   \u001b[36masync\u001b[39m goto() {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mgoto(\u001b[32m\"/auth\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 20 |\u001b[39m   }\n \u001b[90m 21 |\u001b[39m\n \u001b[90m 22 |\u001b[39m   \u001b[36masync\u001b[39m signup(email\u001b[33m,\u001b[39m password) {\u001b[0m\n\u001b[2m    at SignupPage.goto (C:\\Users\\bipin\\tenxyou-web-automation\\pages\\SignupPage.js:19:21)\u001b[22m\n\u001b[2m    at C:\\Users\\bipin\\tenxyou-web-automation\\tests\\signupLogin.spec.js:23:24\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-09-30T10:39:43.062Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "C:\\Users\\bipin\\tenxyou-web-automation\\test-results\\signupLogin-Signup-→-Login-689c5-r-flow-for-user15-gmail-com-chromium\\video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\bipin\\tenxyou-web-automation\\test-results\\signupLogin-Signup-→-Login-689c5-r-flow-for-user15-gmail-com-chromium\\error-context.md"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\bipin\\tenxyou-web-automation\\pages\\SignupPage.js",
+                        "column": 21,
+                        "line": 19
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "dd24da0af4ed1e4578c9-84465334190cd8e8bd20",
+              "file": "signupLogin.spec.js",
+              "line": 14,
+              "column": 9
             }
-          ],
-          "id": "3b902d315255d71a24de-845e9bf92e0136626589",
-          "file": "happyFlow.spec.js",
-          "line": 3,
-          "column": 5
+          ]
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-09-30T09:25:58.064Z",
-    "duration": 24789.438000000002,
-    "expected": 1,
+    "startTime": "2025-09-30T10:39:37.272Z",
+    "duration": 165811.226,
+    "expected": 2,
     "skipped": 0,
-    "unexpected": 0,
+    "unexpected": 13,
     "flaky": 0
   }
 }

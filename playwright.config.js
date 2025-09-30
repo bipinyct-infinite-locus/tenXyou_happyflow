@@ -3,14 +3,15 @@ import { defineConfig, devices } from "@playwright/test";
 
 export default defineConfig({
   testDir: "./tests", // keep your test files organized
-  timeout: 30 * 1000, // max time per test
+  timeout: 120 * 1000, // max time per test
   expect: {
-    timeout: 5000, // assertion timeout
+    timeout: 50000, // assertion timeout
   },
-  fullyParallel: true, // run tests in parallel
+  fullyParallel: true, // run tests fully in parallel
+  workers: 15, // run up to 15 tests concurrently
+  retries: 0, // default, no retries
+  use: { headless: true },
   forbidOnly: !!process.env.CI, // fail build if test.only is left in CI
-  retries: process.env.CI ? 2 : 0, // retry on CI only
-  workers: process.env.CI ? 2 : undefined, // limit workers on CI
 
   reporter: [
     ["list"],

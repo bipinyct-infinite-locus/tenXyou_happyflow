@@ -1,0 +1,230 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - link "Ambassador" [ref=e5] [cursor=pointer]:
+      - /url: /ambassador
+    - link "Help" [ref=e8] [cursor=pointer]:
+      - /url: /help-faq
+  - generic [ref=e9]:
+    - img "TEN_X_YOU_LOGO" [ref=e12] [cursor=pointer]
+    - generic [ref=e13]:
+      - generic [ref=e15] [cursor=pointer]: Fan series
+      - generic [ref=e18] [cursor=pointer]: Men
+      - generic [ref=e21] [cursor=pointer]: Women
+      - generic [ref=e24] [cursor=pointer]: Shoes
+      - generic [ref=e27] [cursor=pointer]: Apparel
+      - generic [ref=e30] [cursor=pointer]: Acessories
+    - generic [ref=e31]:
+      - button [ref=e32] [cursor=pointer]:
+        - img [ref=e33] [cursor=pointer]
+      - button [ref=e35] [cursor=pointer]:
+        - img [ref=e36] [cursor=pointer]
+      - button [ref=e38] [cursor=pointer]:
+        - img [ref=e39] [cursor=pointer]
+      - button [ref=e41] [cursor=pointer]:
+        - img [ref=e42] [cursor=pointer]
+  - generic [ref=e45]:
+    - generic [ref=e47]:
+      - generic [ref=e49]:
+        - img [ref=e53] [cursor=pointer]
+        - img [ref=e57] [cursor=pointer]
+        - img [ref=e61] [cursor=pointer]
+        - img [ref=e65] [cursor=pointer]
+      - generic [ref=e68]:
+        - button [ref=e69] [cursor=pointer]
+        - button [ref=e71] [cursor=pointer]
+        - button [ref=e73] [cursor=pointer]
+        - button [ref=e75] [cursor=pointer]
+    - generic [ref=e79]:
+      - generic [ref=e81]:
+        - img [ref=e82]
+        - paragraph [ref=e84]: Designed in Berlin & Portland
+      - generic [ref=e86]:
+        - img [ref=e87]
+        - paragraph [ref=e89]: Co-created by Sachin Tendulkar
+      - generic [ref=e91]:
+        - img [ref=e92]
+        - paragraph [ref=e94]: Technology Marker
+    - generic [ref=e95]:
+      - generic [ref=e96]:
+        - heading "Shop By Activity" [level=1] [ref=e97]
+        - generic [ref=e99]:
+          - generic [ref=e100] [cursor=pointer]: Cricket
+          - generic [ref=e104] [cursor=pointer]: Lifestyle
+          - generic [ref=e105] [cursor=pointer]: Running
+          - generic [ref=e106] [cursor=pointer]: Walking
+      - generic [ref=e107]:
+        - generic [ref=e109]:
+          - img "Cricket" [ref=e111]
+          - button "SHOP Cricket" [ref=e113]:
+            - generic [ref=e114]: SHOP Cricket
+        - generic [ref=e116]:
+          - generic [ref=e117]:
+            - generic [ref=e118]:
+              - generic [ref=e119] [cursor=pointer]:
+                - img [ref=e121] [cursor=pointer]
+                - button [ref=e123] [cursor=pointer]:
+                  - img [ref=e124] [cursor=pointer]
+              - img [ref=e130] [cursor=pointer]
+            - generic [ref=e131]:
+              - generic [ref=e132]:
+                - paragraph [ref=e133] [cursor=pointer]: Cricket Batsman Premium
+                - button [ref=e135] [cursor=pointer]:
+                  - img [ref=e136] [cursor=pointer]
+              - generic [ref=e140]:
+                - img [ref=e141]
+                - heading "2,500" [level=1] [ref=e143]
+          - generic [ref=e144]:
+            - generic [ref=e145]:
+              - generic [ref=e146] [cursor=pointer]:
+                - img [ref=e148] [cursor=pointer]
+                - button [ref=e150] [cursor=pointer]:
+                  - img [ref=e151] [cursor=pointer]
+              - generic [ref=e154]:
+                - img [ref=e157] [cursor=pointer]
+                - img [ref=e160] [cursor=pointer]
+                - img [ref=e163] [cursor=pointer]
+            - generic [ref=e164]:
+              - generic [ref=e165]:
+                - paragraph [ref=e166] [cursor=pointer]: Cricket Batsman Advanced
+                - button [ref=e168] [cursor=pointer]:
+                  - img [ref=e169] [cursor=pointer]
+              - generic [ref=e173]:
+                - img [ref=e174]
+                - heading "4,900" [level=1] [ref=e176]
+          - generic [ref=e177]:
+            - generic [ref=e178]:
+              - generic [ref=e179] [cursor=pointer]:
+                - img [ref=e181] [cursor=pointer]
+                - button [ref=e183] [cursor=pointer]:
+                  - img [ref=e184] [cursor=pointer]
+              - generic [ref=e187]:
+                - img [ref=e190] [cursor=pointer]
+                - img [ref=e193] [cursor=pointer]
+            - generic [ref=e194]:
+              - generic [ref=e195]:
+                - paragraph [ref=e196] [cursor=pointer]: Centurion
+                - button [ref=e198] [cursor=pointer]:
+                  - img [ref=e199] [cursor=pointer]
+              - generic [ref=e203]:
+                - img [ref=e204]
+                - heading "5,999" [level=1] [ref=e206]
+          - generic [ref=e207]:
+            - generic [ref=e208]:
+              - generic [ref=e209] [cursor=pointer]:
+                - img [ref=e211] [cursor=pointer]
+                - button [ref=e213] [cursor=pointer]:
+                  - img [ref=e214] [cursor=pointer]
+              - generic [ref=e217]:
+                - img [ref=e220] [cursor=pointer]
+                - img [ref=e223] [cursor=pointer]
+            - generic [ref=e224]:
+              - generic [ref=e225]:
+                - paragraph [ref=e226] [cursor=pointer]: Daily Sports Shoes
+                - button [ref=e228] [cursor=pointer]:
+                  - img [ref=e229] [cursor=pointer]
+              - generic [ref=e233]:
+                - img [ref=e234]
+                - heading "3,000" [level=1] [ref=e236]
+          - generic [ref=e237]:
+            - generic [ref=e238]:
+              - generic [ref=e239] [cursor=pointer]:
+                - img [ref=e241] [cursor=pointer]
+                - button [ref=e243] [cursor=pointer]:
+                  - img [ref=e244] [cursor=pointer]
+              - generic [ref=e247]:
+                - img [ref=e250] [cursor=pointer]
+                - img [ref=e253] [cursor=pointer]
+            - generic [ref=e254]:
+              - generic [ref=e255]:
+                - paragraph [ref=e256] [cursor=pointer]: Lace Up Walking
+                - button [ref=e258] [cursor=pointer]:
+                  - img [ref=e259] [cursor=pointer]
+              - generic [ref=e263]:
+                - img [ref=e264]
+                - heading "2,000" [level=1] [ref=e266]
+          - generic [ref=e267]:
+            - generic [ref=e268]:
+              - generic [ref=e269] [cursor=pointer]:
+                - img [ref=e271] [cursor=pointer]
+                - button [ref=e273] [cursor=pointer]:
+                  - img [ref=e274] [cursor=pointer]
+              - generic [ref=e277]:
+                - img [ref=e280] [cursor=pointer]
+                - img [ref=e283] [cursor=pointer]
+                - img [ref=e286] [cursor=pointer]
+            - generic [ref=e287]:
+              - generic [ref=e288]:
+                - paragraph [ref=e289] [cursor=pointer]: Slip on Young
+                - button [ref=e291] [cursor=pointer]:
+                  - img [ref=e292] [cursor=pointer]
+              - generic [ref=e296]:
+                - img [ref=e297]
+                - heading "1,500" [level=1] [ref=e299]
+    - generic [ref=e302]:
+      - generic [ref=e304]:
+        - img [ref=e305]
+        - paragraph [ref=e307]: Same-day delivery. On us.
+      - generic [ref=e309]:
+        - img [ref=e310]
+        - paragraph [ref=e312]: Doorstep Try-On / Doorstep Fit Check
+      - generic [ref=e314]:
+        - img [ref=e315]
+        - paragraph [ref=e317]: 14-day returns. No questions asked.
+  - generic [ref=e321]:
+    - generic [ref=e322]:
+      - generic [ref=e324]:
+        - generic [ref=e325]: Help
+        - generic [ref=e326]:
+          - generic [ref=e327] [cursor=pointer]: Help
+          - generic [ref=e328] [cursor=pointer]: Delivery & Shipping
+          - generic [ref=e329] [cursor=pointer]: Returns
+      - generic [ref=e331]:
+        - generic [ref=e332]: Legals
+        - generic [ref=e333]:
+          - generic [ref=e334] [cursor=pointer]: About Us
+          - generic [ref=e335] [cursor=pointer]: Terms & Conditions
+          - generic [ref=e336] [cursor=pointer]: Privacy Policy
+          - generic [ref=e337] [cursor=pointer]: Returns & Refund
+    - generic [ref=e339]:
+      - generic [ref=e341]:
+        - heading "Contact Us" [level=3] [ref=e342]
+        - generic [ref=e343]:
+          - generic [ref=e344] [cursor=pointer]:
+            - button [ref=e346] [cursor=pointer]:
+              - img [ref=e347] [cursor=pointer]
+            - heading "WhatsApp us at 9916201010" [level=1] [ref=e349] [cursor=pointer]:
+              - generic [ref=e350] [cursor=pointer]: WhatsApp us at 9916201010
+          - generic [ref=e351]:
+            - link "Email us at joyofplay@tenxyou.com" [ref=e352] [cursor=pointer]:
+              - /url: mailto:joyofplay@tenxyou.com?subject=Hello%20Team&body=I%20would%20like%20to%20know%20about...
+              - button [ref=e354] [cursor=pointer]:
+                - img [ref=e355] [cursor=pointer]
+              - heading "Email us at joyofplay@tenxyou.com" [level=1] [ref=e357] [cursor=pointer]:
+                - generic [ref=e358] [cursor=pointer]: Email us at joyofplay@tenxyou.com
+            - link "For any support, write to us at thirdumpire@tenxyou.com" [ref=e359] [cursor=pointer]:
+              - /url: mailto:thirdumpire@tenxyou.com?subject=Hello%20Team&body=I%20would%20like%20to%20know%20about...
+              - button [ref=e361] [cursor=pointer]:
+                - img [ref=e362] [cursor=pointer]
+              - heading "For any support, write to us at thirdumpire@tenxyou.com" [level=1] [ref=e364] [cursor=pointer]:
+                - generic [ref=e365] [cursor=pointer]: For any support, write to us at thirdumpire@tenxyou.com
+          - generic [ref=e366]:
+            - button [ref=e368] [cursor=pointer]:
+              - img [ref=e369] [cursor=pointer]
+            - generic [ref=e371]:
+              - heading "Visit us at:" [level=1] [ref=e372]:
+                - generic [ref=e373]: "Visit us at:"
+              - paragraph [ref=e374]: 5th Main road, 1st Stage Rd, Binnamangala, Indiranagar, Bengaluru, Karnataka 560038
+      - generic [ref=e375]:
+        - generic [ref=e376]:
+          - button [ref=e377] [cursor=pointer]:
+            - img [ref=e378] [cursor=pointer]
+          - button [ref=e380] [cursor=pointer]:
+            - img [ref=e381] [cursor=pointer]
+          - button [ref=e383] [cursor=pointer]:
+            - img [ref=e384] [cursor=pointer]
+        - generic [ref=e386]: © 2025 TenXYou, Inc. All rights reserved
+  - alert [ref=e387]: Designed in Berlin & Portland
+```
